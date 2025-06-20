@@ -1,49 +1,13 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  // Generate more grain particles (increased from 50 to 150)
-  const grains = Array.from({ length: 150 }, (_, i) => ({
-    id: i,
-    initialX: Math.random() * 100,
-    initialY: Math.random() * 100,
-    size: Math.random() * 3 + 1,
-    speed: Math.random() * 0.5 + 0.1,
-  }));
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Much Darker Blue Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-blue-950/80 via-slate-900/60 to-indigo-950/90"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-slate-950/50"></div>
-      
-      {/* Interactive Grain Elements */}
-      {grains.map((grain) => (
-        <div
-          key={grain.id}
-          className="absolute w-1 h-1 bg-blue-300/20 rounded-full transition-all duration-700 ease-out"
-          style={{
-            left: `${grain.initialX + (mousePosition.x - window.innerWidth / 2) * grain.speed * 0.01}%`,
-            top: `${grain.initialY + (mousePosition.y - window.innerHeight / 2) * grain.speed * 0.01}%`,
-            width: `${grain.size}px`,
-            height: `${grain.size}px`,
-            transform: `translate(${Math.sin(Date.now() * 0.001 + grain.id) * 20}px, ${Math.cos(Date.now() * 0.001 + grain.id) * 20}px)`,
-            filter: 'blur(0.5px)',
-          }}
-        />
-      ))}
+      <div className="absolute inset-0 bg-gradient-to-tr from-blue-950/90 via-slate-950/70 to-indigo-950/95"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/40 to-slate-950/70"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-blue-700/10 rounded-full blur-3xl animate-pulse"></div>
@@ -51,12 +15,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-8 animate-fade-in tracking-tight" 
-              style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-8 animate-fade-in tracking-tight" 
+              style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
             Sumit Mishra
           </h1>
           
-          <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200 whitespace-nowrap overflow-hidden"
+          <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200"
               style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             Front-End Developer | Digital Marketer | Tech Creator | GATE CS 2025 Qualified
           </h2>

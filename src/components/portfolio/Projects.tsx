@@ -56,17 +56,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-blue-700/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-indigo-800/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent tracking-tight"
+          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-white tracking-tight"
               style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em' }}>
             Featured Projects
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-10">
             {projects.map((project, index) => (
-              <div key={index} className="group bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-700 transform hover:-translate-y-6 hover:scale-[1.02] border border-gray-100 hover:border-blue-300/50 cursor-pointer">
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-700 transform hover:-translate-y-6 hover:scale-[1.02] border border-white/20 hover:border-blue-300/50 cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image}
@@ -86,18 +90,18 @@ const Projects = () => {
                     📌 {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-6 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 text-lg">
+                  <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 text-lg">
                     {project.description}
                   </p>
                   
                   <div className="space-y-3">
-                    <h4 className="font-bold text-gray-800 group-hover:text-blue-800 transition-colors duration-300 text-lg"
+                    <h4 className="font-bold text-gray-200 group-hover:text-blue-300 transition-colors duration-300 text-lg"
                         style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>
                       My Role:
                     </h4>
                     <ul className="space-y-2">
                       {project.role.map((roleItem, roleIndex) => (
-                        <li key={roleIndex} className="flex items-start text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                        <li key={roleIndex} className="flex items-start text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mt-3 mr-4 flex-shrink-0 transform transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg"></div>
                           {roleItem}
                         </li>

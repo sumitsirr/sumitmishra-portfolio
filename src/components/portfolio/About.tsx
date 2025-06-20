@@ -46,7 +46,7 @@ const About = () => {
             <div className="relative group">
               <div className="w-full h-96 bg-gradient-to-br from-slate-600 via-blue-600 to-indigo-600 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/25">
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=600&fit=crop&crop=face"
+                  src="https://i.postimg.cc/kgcDkkj7/YT-Logo.jpg"
                   alt="Sumit Mishra"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

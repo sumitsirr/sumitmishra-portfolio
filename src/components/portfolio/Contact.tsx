@@ -72,8 +72,12 @@ const Contact = () => {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                    <span className="text-white font-bold">S</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 overflow-hidden">
+                    <img 
+                      src="https://i.postimg.cc/kgcDkkj7/YT-Logo.jpg" 
+                      alt="Sumit Mishra" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">Sumit Mishra</div>
