@@ -13,8 +13,8 @@ const Hero = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Generate grain particles
-  const grains = Array.from({ length: 50 }, (_, i) => ({
+  // Generate more grain particles (increased from 50 to 150)
+  const grains = Array.from({ length: 150 }, (_, i) => ({
     id: i,
     initialX: Math.random() * 100,
     initialY: Math.random() * 100,
@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-black text-white mb-8 animate-fade-in tracking-tight" 
-              style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em' }}>
+              style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
             Sumit Mishra
           </h1>
           

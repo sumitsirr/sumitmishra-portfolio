@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Github, Linkedin, Youtube, Instagram } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +9,38 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.send(
+        'service_uga3xtk', // service ID
+        'template_3np2dqd', // template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Sumit Mishra',
+        },
+        'Ed94EGyrPS0r91d0Z' // public key
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      console.log('Email sent successfully!');
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Email sending failed:', error);
+    } finally {
+      setIsSubmitting(false);
+      // Reset status after 3 seconds
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -26,13 +54,17 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent"
+              style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
             Let's Connect
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6"
+                  style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
+                Get in Touch
+              </h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
                 Ready to collaborate on your next project? Whether you need a front-end developer, 
                 digital marketer, or someone who can bridge tech and business strategy, I'd love to hear from you.
@@ -82,7 +114,8 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-300 hover:shadow-md"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-300 hover:shadow-md disabled:opacity-50"
                   placeholder="Your Name"
                 />
               </div>
@@ -98,7 +131,8 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-300 hover:shadow-md"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-300 hover:shadow-md disabled:opacity-50"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -113,19 +147,35 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none hover:border-blue-300 hover:shadow-md"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none hover:border-blue-300 hover:shadow-md disabled:opacity-50"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
               
               <button
                 type="submit"
-                className="group relative w-full bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-700 hover:via-blue-800 hover:to-indigo-800 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 overflow-hidden"
+                disabled={isSubmitting}
+                className="group relative w-full bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-700 hover:via-blue-800 hover:to-indigo-800 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                <span className="relative z-10">Send Message</span>
+                <span className="relative z-10">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               </button>
+              
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="text-green-600 text-center font-medium">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="text-red-600 text-center font-medium">
+                  Failed to send message. Please try again or contact me directly.
+                </div>
+              )}
             </form>
           </div>
         </div>

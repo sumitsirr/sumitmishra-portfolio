@@ -1,63 +1,79 @@
 
-import React from 'react';
-import { Github, Linkedin, Youtube, Instagram, Menu } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-gradient-to-r from-slate-900/95 via-blue-950/95 to-indigo-950/95 backdrop-blur-lg border-b border-blue-800/30 shadow-2xl shadow-blue-900/20' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <div className="text-2xl font-black tracking-tight text-blue-900 hover:text-blue-800 transition-colors duration-300 cursor-pointer"
+               style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
             Sumit Mishra
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-blue-700 transition-all duration-300 relative group">
-              About
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </a>
-            <a href="#skills" className="text-gray-700 hover:text-blue-700 transition-all duration-300 relative group">
-              Skills
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-700 transition-all duration-300 relative group">
-              Projects
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </a>
-            <a href="#youtube" className="text-gray-700 hover:text-blue-700 transition-all duration-300 relative group">
-              YouTube
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-700 transition-all duration-300 relative group">
-              Contact
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </a>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex space-x-8">
+            {['About', 'Skills', 'Projects', 'YouTube', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="group relative text-gray-300 hover:text-white font-medium transition-colors duration-300 py-2"
+                style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+              >
+                {item}
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </button>
+            ))}
           </nav>
-
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-3">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                 className="text-gray-600 hover:text-blue-700 transition-all duration-300 transform hover:scale-110">
-                <Github size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-600 hover:text-blue-700 transition-all duration-300 transform hover:scale-110">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-600 hover:text-red-600 transition-all duration-300 transform hover:scale-110">
-                <Youtube size={20} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-600 hover:text-pink-600 transition-all duration-300 transform hover:scale-110">
-                <Instagram size={20} />
-              </a>
-            </div>
-            <button className="md:hidden text-gray-600 hover:text-blue-700 transition-all duration-300 transform hover:scale-110">
-              <Menu size={24} />
-            </button>
-          </div>
+          
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-white hover:text-blue-300 transition-colors duration-300"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <nav className="md:hidden mt-4 pb-4 space-y-4 bg-gradient-to-r from-slate-900/95 via-blue-950/95 to-indigo-950/95 backdrop-blur-lg rounded-lg border border-blue-800/30">
+            {['About', 'Skills', 'Projects', 'YouTube', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="block w-full text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-blue-900/30 transition-colors duration-300 font-medium"
+                style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+              >
+                {item}
+              </button>
+            ))}
+          </nav>
+        )}
       </div>
     </header>
   );
