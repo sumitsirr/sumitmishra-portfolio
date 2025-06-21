@@ -26,7 +26,7 @@ const Projects = () => {
         "Handled student inquiries, bookings, and grievance resolution",
         "Designed and executed content marketing for visibility and downloads"
       ],
-      image: "https://i.postimg.cc/SxJFTwKt/pg.jpg",
+      image: "https://i.postimg.cc/QMDGqSFF/Pi7-image.jpg",
       gradient: "from-slate-700 to-blue-800"
     },
     {
