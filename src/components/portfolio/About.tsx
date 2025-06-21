@@ -31,7 +31,7 @@ const About = () => {
                 <span className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                   Full-Stack Development
                 </span>
-                <span className="bg-gradient-to-r from-slate-100 to-blue-100 text-slate-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
+                <span className="bg-gradient-to-r from-slate-100 to-blue-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                   Digital Marketing
                 </span>
                 <span className="bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">

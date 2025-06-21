@@ -11,16 +11,13 @@ const YouTubeSection = () => {
 
   const videos = [
     {
-      embedId: "WJXvF0jCH2g",
-      title: "AKTU College Selection Guide"
+      embedId: "WJXvF0jCH2g"
     },
     {
-      embedId: "hVwbLVrhIFA", 
-      title: "GATE Preparation Strategy"
+      embedId: "hVwbLVrhIFA" 
     },
     {
-      embedId: "-kePCsCwhIg",
-      title: "College Life & PG Tips"
+      embedId: "-kePCsCwhIg"
     }
   ];
 
@@ -64,16 +61,11 @@ const YouTubeSection = () => {
                   <iframe
                     className="w-full h-full"
                     src={`https://www.youtube.com/embed/${video.embedId}`}
-                    title={video.title}
+                    title={`YouTube video ${index + 1}`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-800 text-center">
-                    {video.title}
-                  </h3>
                 </div>
               </div>
             ))}
@@ -87,7 +79,7 @@ const YouTubeSection = () => {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-red-500/25 overflow-hidden"
             >
-              <span className="relative z-10">Subscribe to Channel</span>
+              <span className="relative z-10">Subscribe to the Channel</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
           </div>

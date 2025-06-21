@@ -10,7 +10,7 @@ const Skills = () => {
     },
     {
       title: "Marketing & Sales", 
-      skills: ["Digital Strategy", "SEO", "Instagram Reels Marketing", "Performance Marketing"],
+      skills: ["Digital Strategy", "SEO", "Social Media Marketing", "Performance Marketing", "Offline or On Ground Marketing"],
       color: "from-slate-700 to-blue-800"
     },
     {

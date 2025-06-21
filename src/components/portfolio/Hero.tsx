@@ -31,8 +31,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-8 animate-fade-in tracking-tight" 
-              style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.02em', fontWeight: '700' }}>
-            Sumit Mishra
+              style={{ fontFamily: 'Bebas Neue, cursive', letterSpacing: '0.1em' }}>
+            SUMIT MISHRA
           </h1>
           
           <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200 whitespace-nowrap"
@@ -40,7 +40,7 @@ const Hero = () => {
             Front-End Developer | Digital Marketer | Tech Creator | GATE CS 2025 Qualified
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto animate-fade-in delay-300 leading-relaxed"
+          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-5xl mx-auto animate-fade-in delay-300 leading-relaxed whitespace-nowrap"
              style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             "Building user-first platforms and scaling them with content, code, and creativity."
           </p>

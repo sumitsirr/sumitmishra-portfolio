@@ -22,6 +22,10 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
@@ -30,10 +34,13 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-black tracking-tight text-gray-200 hover:text-white transition-colors duration-300 cursor-pointer"
-               style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
+          <button 
+            onClick={scrollToTop}
+            className="text-2xl font-black tracking-tight text-gray-100 hover:text-white transition-colors duration-300 cursor-pointer"
+            style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}
+          >
             Sumit Mishra
-          </div>
+          </button>
           
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
