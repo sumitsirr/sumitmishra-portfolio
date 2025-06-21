@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Play, Users, Eye, Video } from 'lucide-react';
+import { Users, Eye, Video } from 'lucide-react';
 
 const YouTubeSection = () => {
   const stats = [
@@ -11,22 +11,16 @@ const YouTubeSection = () => {
 
   const videos = [
     {
-      title: "Complete React Tutorial for Beginners",
-      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=225&fit=crop&crop=center",
-      views: "45K views",
-      duration: "2 weeks ago"
+      embedId: "WJXvF0jCH2g",
+      title: "AKTU College Selection Guide"
     },
     {
-      title: "JavaScript ES6+ Features Explained",
-      thumbnail: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=225&fit=crop&crop=center",
-      views: "32K views",
-      duration: "1 month ago"
+      embedId: "hVwbLVrhIFA", 
+      title: "GATE Preparation Strategy"
     },
     {
-      title: "Building Modern UIs with Tailwind CSS",
-      thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=225&fit=crop&crop=center",
-      views: "28K views",
-      duration: "3 weeks ago"
+      embedId: "-kePCsCwhIg",
+      title: "College Life & PG Tips"
     }
   ];
 
@@ -47,15 +41,15 @@ const YouTubeSection = () => {
           {/* Stats Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="group text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div key={index} className="text-center p-8 bg-white rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                   <stat.icon className="text-white w-8 h-8" />
                 </div>
-                <div className="text-3xl font-black text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300"
-                     style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
+                <div className="text-3xl font-bold text-gray-800 mb-2"
+                     style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium group-hover:text-gray-800 transition-colors duration-300">
+                <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -65,27 +59,21 @@ const YouTubeSection = () => {
           {/* Featured Videos */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {videos.map((video, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100 hover:border-blue-200">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="relative overflow-hidden aspect-video">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube.com/embed/${video.embedId}`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <Play className="text-white w-6 h-6 ml-1" fill="currentColor" />
-                    </div>
-                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-300 line-clamp-2">
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-800 text-center">
                     {video.title}
                   </h3>
-                  <div className="flex justify-between text-sm text-gray-600">
-                    <span>{video.views}</span>
-                    <span>{video.duration}</span>
-                  </div>
                 </div>
               </div>
             ))}
@@ -94,13 +82,12 @@ const YouTubeSection = () => {
           {/* CTA */}
           <div className="text-center">
             <a 
-              href="https://youtube.com" 
+              href="http://www.youtube.com/@SumitMishra77" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-red-500/25 overflow-hidden"
             >
               <span className="relative z-10">Subscribe to Channel</span>
-              <Play className="relative z-10 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" />
               <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
           </div>

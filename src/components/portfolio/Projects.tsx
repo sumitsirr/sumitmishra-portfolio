@@ -13,7 +13,7 @@ const Projects = () => {
         "Promoted via SEO, YouTube, Instagram Reels, and student networks",
         "Generated high organic traction and built trust as a counseling brand"
       ],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+      image: "https://i.postimg.cc/DJxYp2Wh/GC-Project.png",
       gradient: "from-blue-700 to-indigo-800"
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
         "Handled student inquiries, bookings, and grievance resolution",
         "Designed and executed content marketing for visibility and downloads"
       ],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
+      image: "https://i.postimg.cc/sB9LSPsv/NC-Project.png",
       gradient: "from-slate-700 to-blue-800"
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
         "Designed the visual presentation",
         "Marketed via YouTube and PDF downloads"
       ],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      image: "https://i.postimg.cc/Q98yqBdS/TR-Project.png",
       gradient: "from-indigo-700 to-blue-800"
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
         "Worked with OpenCV and basic ML models",
         "Managed project documentation and final presentation"
       ],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
+      image: "https://i.postimg.cc/zL1MV2ms/DDD-Project.jpg",
       gradient: "from-blue-800 to-slate-800"
     }
   ];

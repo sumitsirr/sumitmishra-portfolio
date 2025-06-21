@@ -30,7 +30,7 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-black tracking-tight text-blue-900 hover:text-blue-800 transition-colors duration-300 cursor-pointer"
+          <div className="text-2xl font-black tracking-tight text-gray-200 hover:text-white transition-colors duration-300 cursor-pointer"
                style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
             Sumit Mishra
           </div>
