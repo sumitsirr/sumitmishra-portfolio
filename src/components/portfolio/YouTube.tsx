@@ -35,12 +35,12 @@ const YouTubeSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent"
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-red-600"
                 style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
               YouTube Channel
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Sharing knowledge through comprehensive tutorials and practical coding sessions to help students master web development and programming concepts.
+              Creating content on YouTube to guide students through AKTU counseling, college selection, PG accommodations, and my GATE preparation journey, while sharing relatable college life content.
             </p>
           </div>
 

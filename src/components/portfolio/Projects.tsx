@@ -17,7 +17,7 @@ const Projects = () => {
       gradient: "from-blue-700 to-indigo-800"
     },
     {
-      title: "next2campuss",
+      title: "Next2Campus",
       subtitle: "Founder & App Promoter", 
       description: "A mobile app that lets students find PG accommodations near their college campus with verified listings, reviews, pricing, and booking support.",
       role: [
@@ -31,7 +31,7 @@ const Projects = () => {
     },
     {
       title: "Tech Roadmap",
-      subtitle: "Initiator & Educator",
+      subtitle: "Initiator, Educator and Developer",
       description: "A visual, semester-wise roadmap for engineering students to help them navigate through skill-building, coding, internships, and projects during their B.Tech journey.",
       role: [
         "Created structured content based on real industry needs",
@@ -43,7 +43,7 @@ const Projects = () => {
     },
     {
       title: "Driver Drowsiness Detection",
-      subtitle: "AI Project",
+      subtitle: "AI-ML Team Project",
       description: "A computer vision-based system to monitor driver fatigue and issue alerts to prevent road accidents.",
       role: [
         "Contributed to front-end dashboard interface",
@@ -85,7 +85,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-8">
-                  <h3 className={`text-3xl font-black mb-4 bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 tracking-tight`}
+                  <h3 className="text-3xl font-black mb-4 text-white group-hover:scale-105 transition-transform duration-300 tracking-tight"
                       style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.01em' }}>
                     📌 {project.title}
                   </h3>

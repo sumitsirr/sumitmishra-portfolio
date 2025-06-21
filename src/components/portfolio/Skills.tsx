@@ -30,7 +30,7 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-black text-center mb-16 bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent tracking-tight"
-              style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em' }}>
+              style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em' }}>
             Skills & Tech Stack
           </h2>
           

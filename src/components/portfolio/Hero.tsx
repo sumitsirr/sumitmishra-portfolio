@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-8 animate-fade-in tracking-tight" 
-              style={{ fontFamily: 'Orbitron, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
+              style={{ fontFamily: 'Playfair Display, serif', letterSpacing: '-0.02em', fontWeight: '700' }}>
             Sumit Mishra
           </h1>
           
@@ -25,7 +25,7 @@ const Hero = () => {
             Front-End Developer | Digital Marketer | Tech Creator | GATE CS 2025 Qualified
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto animate-fade-in delay-300 leading-relaxed"
+          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto animate-fade-in delay-300 leading-relaxed whitespace-nowrap"
              style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             "Building user-first platforms and scaling them with content, code, and creativity."
           </p>
@@ -43,10 +43,10 @@ const Hero = () => {
               <div className="absolute inset-0 bg-blue-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
             
-            <button className="group relative bg-gradient-to-r from-slate-800 via-slate-900 to-blue-950 hover:from-slate-700 hover:via-slate-800 hover:to-blue-900 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-slate-500/30 overflow-hidden border border-slate-600/30 hover:border-slate-400/50 rounded-lg">
+            <button className="group relative bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 hover:from-blue-600 hover:via-blue-700 hover:to-indigo-800 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/30 overflow-hidden border border-blue-600/30 hover:border-blue-400/50 rounded-lg">
               <span className="relative z-10">WATCH YOUTUBE</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 bg-slate-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-blue-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
           </div>
         </div>
