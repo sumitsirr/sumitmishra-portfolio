@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Github, Linkedin, Instagram, X } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -19,15 +18,15 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_uga3xtk', // service ID
-        'template_3np2dqd', // template ID
+        'service_4re3vz2', // updated service ID
+        'template_bupyyu7', // updated template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: 'Sumit Mishra',
         },
-        'Ed94EGyrPS0r91d0Z' // public key
+        'Ed94EGyrPS0r91d0Z' // updated public key
       );
 
       setSubmitStatus('success');

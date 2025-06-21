@@ -38,11 +38,11 @@ const YouTubeSection = () => {
           {/* Stats Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <stat.icon className="text-white w-8 h-8" />
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="text-white w-6 h-6" />
                 </div>
-                <div className="text-3xl font-bold text-gray-800 mb-2"
+                <div className="text-2xl font-bold text-gray-800 mb-2"
                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {stat.number}
                 </div>
@@ -54,7 +54,7 @@ const YouTubeSection = () => {
           </div>
 
           {/* Featured Videos */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {videos.map((video, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative overflow-hidden aspect-video">
@@ -72,7 +72,7 @@ const YouTubeSection = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="text-center mt-20">
             <a 
               href="http://www.youtube.com/@SumitMishra77" 
               target="_blank" 

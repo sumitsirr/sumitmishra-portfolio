@@ -13,7 +13,7 @@ const Projects = () => {
         "Promoted via SEO, YouTube, Instagram Reels, and student networks",
         "Generated high organic traction and built trust as a counseling brand"
       ],
-      image: "https://i.postimg.cc/DJxYp2Wh/GC-Project.png",
+      image: "https://i.postimg.cc/KjbSzjx1/GC-Project.png",
       gradient: "from-blue-700 to-indigo-800"
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
         "Handled student inquiries, bookings, and grievance resolution",
         "Designed and executed content marketing for visibility and downloads"
       ],
-      image: "https://i.postimg.cc/sB9LSPsv/NC-Project.png",
+      image: "https://i.postimg.cc/1zL1kMdc/NC-Project.png",
       gradient: "from-slate-700 to-blue-800"
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
         "Designed the visual presentation",
         "Marketed via YouTube and PDF downloads"
       ],
-      image: "https://i.postimg.cc/Q98yqBdS/TR-Project.png",
+      image: "https://i.postimg.cc/9MZHCZ53/TR-Project.png",
       gradient: "from-indigo-700 to-blue-800"
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
         "Worked with OpenCV and basic ML models",
         "Managed project documentation and final presentation"
       ],
-      image: "https://i.postimg.cc/zL1MV2ms/DDD-Project.jpg",
+      image: "https://i.postimg.cc/6Q7NbFMp/DDD-Project.jpg",
       gradient: "from-blue-800 to-slate-800"
     }
   ];
@@ -75,7 +75,7 @@ const Projects = () => {
                   <img 
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-56 object-contain bg-white transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <div className={`absolute top-6 right-6 bg-gradient-to-r ${project.gradient} text-white px-4 py-2 font-bold text-sm shadow-lg transform transition-all duration-500 group-hover:scale-110`}
