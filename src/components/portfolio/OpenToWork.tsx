@@ -30,7 +30,7 @@ const OpenToWork = () => {
             tech skills, and growth mindset to solve real problems. If you're building something cool, let's connect!
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {opportunities.map((opportunity, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg p-6 text-white font-bold hover:bg-white/20 hover:border-white/50 transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 cursor-default">
                 <span className="group-hover:text-blue-200 transition-colors duration-300"
@@ -40,12 +40,6 @@ const OpenToWork = () => {
               </div>
             ))}
           </div>
-          
-          <button className="group relative bg-gradient-to-r from-green-700 via-emerald-700 to-teal-700 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white px-16 py-6 font-black text-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-green-500/30 overflow-hidden border border-green-600/30 hover:border-green-400/50">
-            <span className="relative z-10" style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>LET'S WORK TOGETHER</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute inset-0 bg-green-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-          </button>
         </div>
       </div>
     </section>

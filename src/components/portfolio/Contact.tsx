@@ -88,19 +88,19 @@ const Contact = () => {
               
               <div className="flex space-x-4">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                   className="group w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6 shadow-lg hover:shadow-gray-500/25">
+                   className="group w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-gray-500/25">
                   <Github className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                   className="group w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6 shadow-lg hover:shadow-blue-500/25">
+                   className="group w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-blue-500/25">
                   <Linkedin className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-                   className="group w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6 shadow-lg hover:shadow-red-500/25">
+                   className="group w-12 h-12 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-red-500/25">
                   <Youtube className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                   className="group w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6 shadow-lg hover:shadow-pink-500/25">
+                   className="group w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-pink-500/25">
                   <Instagram className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
               </div>

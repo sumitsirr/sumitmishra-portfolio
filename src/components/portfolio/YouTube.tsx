@@ -1,96 +1,108 @@
 
 import React from 'react';
-import { Youtube } from 'lucide-react';
+import { Play, Users, Eye, Video } from 'lucide-react';
 
 const YouTubeSection = () => {
+  const stats = [
+    { icon: Users, number: "5000+", label: "Students Guided" },
+    { icon: Eye, number: "1M+", label: "Views" },
+    { icon: Video, number: "150+", label: "Videos Created" },
+  ];
+
   const videos = [
     {
-      title: "AKTU College Reviews & Rankings",
-      thumbnail: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
-      views: "15K+ views"
+      title: "Complete React Tutorial for Beginners",
+      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=225&fit=crop&crop=center",
+      views: "45K views",
+      duration: "2 weeks ago"
     },
     {
-      title: "Engineering Career Roadmap Guide",
-      thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop", 
-      views: "12K+ views"
+      title: "JavaScript ES6+ Features Explained",
+      thumbnail: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=225&fit=crop&crop=center",
+      views: "32K views",
+      duration: "1 month ago"
     },
     {
-      title: "College Hostel Tour & Reviews",
-      thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
-      views: "8K+ views"
-    },
-    {
-      title: "Placement Preparation Tips",
-      thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
-      views: "20K+ views"
+      title: "Building Modern UIs with Tailwind CSS",
+      thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=225&fit=crop&crop=center",
+      views: "28K views",
+      duration: "3 weeks ago"
     }
   ];
 
   return (
-    <section id="youtube" className="py-20 bg-gray-50">
+    <section id="youtube" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-slate-900 via-red-700 to-red-800 bg-clip-text text-transparent tracking-tight"
-                style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent"
+                style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
               YouTube Channel
             </h2>
-            <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Helping thousands of students navigate their academic journey through engaging content, college reviews, and career guidance.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Sharing knowledge through comprehensive tutorials and practical coding sessions to help students master web development and programming concepts.
             </p>
-            
-            <div className="flex items-center justify-center space-x-12 mb-12">
-              <div className="text-center group cursor-default">
-                <div className="text-4xl font-black text-gray-800 group-hover:text-blue-800 transition-colors duration-300"
-                     style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>1000+</div>
-                <div className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-medium">Students Guided</div>
-              </div>
-              <div className="text-center group cursor-default">
-                <div className="text-4xl font-black text-gray-800 group-hover:text-blue-800 transition-colors duration-300"
-                     style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>50+</div>
-                <div className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-medium">Videos Created</div>
-              </div>
-              <div className="text-center group cursor-default">
-                <div className="text-4xl font-black text-gray-800 group-hover:text-blue-800 transition-colors duration-300"
-                     style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>100K+</div>
-                <div className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-medium">Total Views</div>
-              </div>
-            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {videos.map((video, index) => (
-              <div key={index} className="group bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform hover:-translate-y-6 hover:scale-105 cursor-pointer border border-gray-100 hover:border-blue-300/50">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={video.thumbnail}
-                    alt={video.title}
-                    className="w-full h-44 object-cover transition-transform duration-700 group-hover:scale-125"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <Youtube className="text-white w-16 h-16 transform transition-all duration-500 group-hover:scale-125 drop-shadow-2xl" />
-                  </div>
-                  <div className="absolute bottom-3 right-3 bg-black/90 text-white text-xs px-3 py-1 rounded-full font-bold transform transition-all duration-300 group-hover:scale-110">
-                    {video.views}
-                  </div>
+
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="group text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <stat.icon className="text-white w-8 h-8" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-sm font-bold text-gray-800 line-clamp-2 group-hover:text-blue-800 transition-colors duration-300"
-                      style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>
-                    {video.title}
-                  </h3>
+                <div className="text-3xl font-black text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300"
+                     style={{ fontFamily: 'Orbitron, Space Grotesk, system-ui, sans-serif' }}>
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium group-hover:text-gray-800 transition-colors duration-300">
+                  {stat.label}
                 </div>
               </div>
             ))}
           </div>
-          
+
+          {/* Featured Videos */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {videos.map((video, index) => (
+              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100 hover:border-blue-200">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={video.thumbnail} 
+                    alt={video.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Play className="text-white w-6 h-6 ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-300 line-clamp-2">
+                    {video.title}
+                  </h3>
+                  <div className="flex justify-between text-sm text-gray-600">
+                    <span>{video.views}</span>
+                    <span>{video.duration}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
           <div className="text-center">
-            <button className="group relative bg-gradient-to-r from-red-700 via-red-800 to-red-900 hover:from-red-600 hover:via-red-700 hover:to-red-800 text-white px-12 py-5 font-black text-xl transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-red-500/30 inline-flex items-center space-x-4 overflow-hidden border border-red-600/30 hover:border-red-400/50">
-              <Youtube size={28} className="transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-              <span className="relative z-10" style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif' }}>SUBSCRIBE & WATCH NOW</span>
+            <a 
+              href="https://youtube.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-red-500/25 overflow-hidden"
+            >
+              <span className="relative z-10">Subscribe to Channel</span>
+              <Play className="relative z-10 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" />
               <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 bg-red-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-            </button>
+            </a>
           </div>
         </div>
       </div>

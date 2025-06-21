@@ -15,12 +15,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-8 animate-fade-in tracking-tight" 
-              style={{ fontFamily: 'Space Grotesk, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-8 animate-fade-in tracking-tight" 
+              style={{ fontFamily: 'Orbitron, system-ui, sans-serif', letterSpacing: '-0.02em', fontWeight: '900' }}>
             Sumit Mishra
           </h1>
           
-          <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200"
+          <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200 whitespace-nowrap"
               style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             Front-End Developer | Digital Marketer | Tech Creator | GATE CS 2025 Qualified
           </h2>
@@ -31,19 +31,19 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 animate-fade-in delay-500">
-            <button className="group relative bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 hover:from-blue-600 hover:via-blue-700 hover:to-indigo-800 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/30 overflow-hidden border border-blue-600/30 hover:border-blue-400/50">
+            <button className="group relative bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 hover:from-blue-600 hover:via-blue-700 hover:to-indigo-800 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/30 overflow-hidden border border-blue-600/30 hover:border-blue-400/50 rounded-lg">
               <span className="relative z-10">HIRE ME</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-blue-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
             
-            <button className="group relative border-2 border-blue-400/60 hover:border-blue-300/80 text-white px-12 py-4 font-bold text-lg transition-all duration-500 hover:bg-blue-900/40 backdrop-blur-sm overflow-hidden">
+            <button className="group relative border-2 border-blue-400/60 hover:border-blue-300/80 text-white px-12 py-4 font-bold text-lg transition-all duration-500 hover:bg-blue-900/40 backdrop-blur-sm overflow-hidden rounded-lg">
               <span className="relative z-10">VIEW RESUME</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-blue-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
             
-            <button className="group relative bg-gradient-to-r from-slate-800 via-slate-900 to-blue-950 hover:from-slate-700 hover:via-slate-800 hover:to-blue-900 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-slate-500/30 overflow-hidden border border-slate-600/30 hover:border-slate-400/50">
+            <button className="group relative bg-gradient-to-r from-slate-800 via-slate-900 to-blue-950 hover:from-slate-700 hover:via-slate-800 hover:to-blue-900 text-white px-12 py-4 font-bold text-lg transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-slate-500/30 overflow-hidden border border-slate-600/30 hover:border-slate-400/50 rounded-lg">
               <span className="relative z-10">WATCH YOUTUBE</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-slate-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
