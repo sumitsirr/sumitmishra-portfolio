@@ -35,7 +35,7 @@ const Hero = () => {
             SUMIT MISHRA
           </h1>
           
-          <h2 className="text-lg md:text-xl text-blue-200 mb-8 font-medium animate-fade-in delay-200 whitespace-nowrap"
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-200 mb-6 sm:mb-8 font-medium animate-fade-in delay-200 px-2 leading-relaxed"
               style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             Front-End Developer | Digital Marketer | Tech Creator | GATE CS 2025 Qualified
           </h2>
